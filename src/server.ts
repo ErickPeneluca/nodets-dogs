@@ -16,4 +16,9 @@ server.use(express.static(path.join(__dirname, '../public')));
 
 // Routes
 server.use(mainRoutes);
+
+server.use((req,res) =>{
+    res.render('pages/404');
+});
+
 server.listen(process.env.PORT);
